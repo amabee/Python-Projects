@@ -110,9 +110,11 @@ def main():
         os.startfile(codePath)
 
     elif 'joke' in query.lower():
-        jokes = pyjokes.get_jokes()
-        joke = random.choice(jokes)
+        joke = random.choice(pyjokes.get_jokes())
         print(joke)
         speak(joke)
+    else:
+        print("No such command")
+        speak('No such command')
 
 main()
