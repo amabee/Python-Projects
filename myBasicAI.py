@@ -5,7 +5,8 @@ import speech_recognition as speech_recog
 import webbrowser
 import os
 import wikipedia
-
+import pyjokes, random
+import cv2
 
 _Master = "Paul"
 
@@ -30,9 +31,9 @@ def wishMe():
     if time >= 0 and time < 12:
         speak("Good Morning Sire")
     elif time >=12 and time < 18:
-        speak("Good Afternon Sire")
+        speak("Good Afternon Sir")
     else:
-        speak("Good Evening Sire")
+        speak("Good Evening Sir")
 
 def _takeCommands():
     recog = speech_recog.Recognizer()
@@ -108,8 +109,10 @@ def main():
         codePath = "D:\\Microsoft VS Code\\Code.exe"
         os.startfile(codePath)
 
-    elif 'open pycharm' in query.lower():
-        codePath = "D:\\APPS\\PyCharm Community Edition 2021.3.3\\bin\\pycharm64.exe"
-        os.startfile(codePath)
+    elif 'joke' in query.lower():
+        jokes = pyjokes.get_jokes()
+        joke = random.choice(jokes)
+        print(joke)
+        speak(joke)
 
 main()
