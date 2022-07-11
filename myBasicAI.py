@@ -1,4 +1,3 @@
-
 import pyttsx3
 import datetime
 import speech_recognition as speech_recog
@@ -8,6 +7,7 @@ import wikipedia
 import pyjokes, random
 import cv2
 
+# =-----> AI PROGRAM HERE <-----= #
 _Master = "Paul"
 
 #"VOICE"
