@@ -106,7 +106,7 @@ def main():
         speak(f"{_Master} and the date is {date}")
 
     elif 'open visual code' in query.lower():
-        codePath = "D:\\Microsoft VS Code\\Code.exe"
+        codePath = "C:/Users/Sho/AppData/Local/Program/Microsoft VS Code %s"
         os.startfile(codePath)
 
     elif 'joke' in query.lower():
